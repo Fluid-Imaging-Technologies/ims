@@ -1,0 +1,283 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+MAIN_MENU MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Load Image...",               ID_FILE_LOAD_IMAGE
+        MENUITEM "Load Background Image...",    ID_FILE_LOAD_BACKGROUND_IMAGE
+        MENUITEM "Load Background Image Smoothed...", ID_FILE_LOAD_BACKGROUND_IMAGE_SMOOTHED
+        MENUITEM SEPARATOR
+        MENUITEM "Save Masked Image...",        ID_SAVE_MASKED_IMAGE
+        MENUITEM "Save Greyscale Image...",     ID_SAVE_GREYSCALE_IMAGE
+        MENUITEM "Save Binarized Image...",     ID_SAVE_BINARIZED_IMAGE
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_FILE_EXIT
+    END
+END
+
+LOG_WINDOW_MENU MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Save...",                     ID_LOG_SAVE
+        MENUITEM "Save As...",                  ID_LOG_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Close",                       ID_LOG_CLOSE
+    END
+END
+
+OVERLAY_WINDOW_MENU MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Save Image...",               ID_SAVE_IMAGE
+        MENUITEM SEPARATOR
+        MENUITEM "Close",                       ID_CLOSE
+    END
+    POPUP "Tools"
+    BEGIN
+        MENUITEM "Settings...",                 ID_TOOLS_COLORS
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_IMALG               ICON                    "camera.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_IMAGE_CONTROL DIALOGEX 0, 0, 98, 342
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Image Control"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Raw Image",IDC_STATIC,7,1,84,21
+    CONTROL         "YUV",IDC_RADIO_YUV,"Button",BS_AUTORADIOBUTTON | WS_GROUP,12,11,24,8
+    CONTROL         "Y",IDC_RADIO_Y,"Button",BS_AUTORADIOBUTTON,54,11,16,8
+    GROUPBOX        "Mask Image",IDC_STATIC,7,70,84,45
+    CONTROL         "C = A - B [Light]",IDC_MASK_LIGHT,"Button",BS_AUTORADIOBUTTON | WS_GROUP,12,80,68,10
+    CONTROL         "C = B - A [Dark]",IDC_MASK_DARK,"Button",BS_AUTORADIOBUTTON,12,91,67,10
+    CONTROL         "C = Abs(A - B)",IDC_MASK_ALL,"Button",BS_AUTORADIOBUTTON,12,102,63,10
+    GROUPBOX        "Convolve Grayscale",IDC_STATIC,7,118,84,85
+    GROUPBOX        "Binarize Grayscale",IDC_STATIC,7,206,84,40
+    LTEXT           "Threshold",IDC_STATIC,12,218,32,8
+    EDITTEXT        IDC_THRESHOLD_VALUE,48,216,32,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Binarize",IDC_BINARIZE,12,230,74,12
+    GROUPBOX        "Convolve Binarized",IDC_STATIC,7,250,84,56
+    PUSHBUTTON      "Sobel",IDC_BINARY_EDGE_DETECT,12,260,36,12
+    PUSHBUTTON      "Prewitt",IDC_BINARY_EDGE_DETECT2,50,260,36,12
+    PUSHBUTTON      "Open",IDC_BINARY_OPEN,12,288,36,12
+    PUSHBUTTON      "Close",IDC_BINARY_CLOSE,50,288,36,12
+    PUSHBUTTON      "Dilate",IDC_BINARY_DILATE,12,274,36,12
+    PUSHBUTTON      "Erode",IDC_BINARY_ERODE,50,274,36,12
+    PUSHBUTTON      "Sobel",IDC_GRAYSCALE_EDGE_DETECT,12,130,36,12
+    PUSHBUTTON      "Prewitt",IDC_GRAYSCALE_EDGE_DETECT2,12,144,36,12
+    PUSHBUTTON      "Smooth",IDC_GRAYSCALE_SMOOTH,12,172,36,12
+    PUSHBUTTON      "Clear",IDC_GRAYSCALE_RESTORE,50,172,36,12
+    PUSHBUTTON      "Shen",IDC_GRAYSCALE_SHEN,50,130,36,12
+    PUSHBUTTON      "Deriche",IDC_GRAYSCALE_DERICHE,50,144,36,12
+    PUSHBUTTON      "Multiply",IDC_GREYSCALE_MULTIPLY,12,186,36,12
+    EDITTEXT        IDC_MULTIPLY_VALUE,52,186,32,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Update Overlay",IDC_SHOW_OVERLAY,12,310,74,12
+    PUSHBUTTON      "Open",IDC_GRAYSCALE_OPEN,12,158,36,12
+    PUSHBUTTON      "Close",IDC_GRAYSCALE_CLOSE,50,158,36,12
+    GROUPBOX        "Convolve Raw",IDC_STATIC,7,25,84,41
+    PUSHBUTTON      "Sharp 1",IDC_RAW_SHARPEN,12,36,36,12
+    PUSHBUTTON      "Sharp 2",IDC_RAW_SHARPEN2,50,36,36,12
+    PUSHBUTTON      "Original",IDC_RAW_RESTORE,50,50,36,12
+    PUSHBUTTON      "Smooth",IDC_RAW_SMOOTH,12,50,36,12
+    PUSHBUTTON      "Image Ops Dlg...",IDC_IMAGE_OPS_DLG,12,324,74,12
+END
+
+IDD_OVERLAY_SETTINGS DIALOGEX 0, 0, 161, 79
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Overlay Window Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,103,7,51,14
+    LTEXT           "Overlay Pixels",IDC_STATIC,12,16,46,8
+    GROUPBOX        "Colors",IDC_STATIC,7,3,84,70
+    CONTROL         "",IDC_OVERLAY_COLOR,"Button",BS_OWNERDRAW | WS_TABSTOP,68,12,16,16
+    LTEXT           "Bounding Rects",IDC_STATIC,12,36,50,8
+    CONTROL         "",IDC_BOUNDING_RECT_COLOR,"Button",BS_OWNERDRAW | WS_TABSTOP,68,32,16,16
+    LTEXT           "Edges",IDC_STATIC,12,56,20,8
+    CONTROL         "",IDC_EDGE_COLOR,"Button",BS_OWNERDRAW | WS_TABSTOP,68,52,16,16
+    LTEXT           "Pen Width",IDC_STATIC,98,36,34,8
+    EDITTEXT        IDC_PEN_WIDTH,136,34,16,12,ES_AUTOHSCROLL
+END
+
+IDD_CONTEXT_SETUP DIALOGEX 0, 0, 282, 220
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Setup"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Apply",IDC_APPLY,69,166,50,14
+    PUSHBUTTON      "Raw...",IDC_RAW_PROCESSING,18,18,42,14
+    COMBOBOX        IDC_BACKGROUND_ELIMINATION,120,35,80,45,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_INCREASE_CONTRAST,89,51,56,45,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Gray...",IDC_GRAYSCALE_PROCESSING,18,70,42,14
+    EDITTEXT        IDC_SEGMENTATION_THRESHOLD,136,90,24,12,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "Binary...",IDC_BINARY_PROCESSING,17,140,42,14
+    GROUPBOX        "Image Processing Operations",IDC_STATIC,8,6,266,154
+    EDITTEXT        IDC_RAW_LIST,64,19,198,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_GRAYSCALE_LIST,64,71,198,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_BINARY_LIST,63,141,198,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Background Elimination: Keep ",IDC_STATIC,22,38,94,8
+    LTEXT           "Segmentation Threshold (Manual):",IDC_STATIC,22,92,111,8
+    LTEXT           "than background",IDC_STATIC,204,39,55,8
+    LTEXT           "Increase Contrast:",IDC_STATIC,23,54,61,8
+    PUSHBUTTON      "Use Defaults",IDC_USE_DEFAULTS,160,166,50,14
+    GROUPBOX        "Save As",IDC_STATIC,8,182,121,32
+    PUSHBUTTON      "1",IDC_SAVE_ONE,15,193,24,14
+    PUSHBUTTON      "2",IDC_SAVE_TWO,43,193,24,14
+    PUSHBUTTON      "3",IDC_SAVE_THREE,71,193,24,14
+    PUSHBUTTON      "4",IDC_SAVE_FOUR,99,193,24,14
+    GROUPBOX        "Load",IDC_STATIC,153,182,121,32
+    PUSHBUTTON      "1",IDC_LOAD_ONE,160,193,24,14
+    PUSHBUTTON      "2",IDC_LOAD_TWO,188,193,24,14
+    PUSHBUTTON      "3",IDC_LOAD_THREE,216,193,24,14
+    PUSHBUTTON      "4",IDC_LOAD_FOUR,244,193,24,14
+    CONTROL         "Use auto threshold",IDC_USE_AUTO_THRESHOLD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,22,106,77,10
+    EDITTEXT        IDC_SEGMENTATION_THRESHOLD_AUTO,198,90,24,12,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    LTEXT           "(Auto):",IDC_STATIC,169,92,24,8
+    CONTROL         "Use adaptive threshold",IDC_USE_ADAPTIVE_THRESHOLD,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,22,120,90,10
+    LTEXT           "Neighborhood:",IDC_STATIC,119,120,48,8,WS_DISABLED
+    EDITTEXT        IDC_NEIGHBORHOOD_SIZE,172,118,24,12,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+END
+
+IDD_IMAGE_OPERATIONS DIALOGEX 0, 0, 199, 87
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Image Operations"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,39,67,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,109,67,50,14
+    LISTBOX         IDC_AVAILABLE_LIST,6,13,80,48,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_CURRENT_LIST,113,13,80,48,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      ">",IDC_ADD,91,20,16,14
+    PUSHBUTTON      "<",IDC_REMOVE,91,40,16,14
+    LTEXT           "Available",IDC_STATIC,30,2,30,8
+    LTEXT           "Current",IDC_STATIC,140,2,26,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_IMAGE_CONTROL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 91
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 335
+    END
+
+    IDD_OVERLAY_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 154
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_CONTEXT_SETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 275
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 213
+    END
+
+    IDD_IMAGE_OPERATIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
