@@ -1,7 +1,8 @@
   ims
 =======
 
-A small Win7/Mil9 app for exploring the image processing chain for VisualSpreadsheet.
+A Win7/Mil9/VS2010 project for experimenting with and testing the image processing chain 
+for VisualSpreadsheet.
 
 
   Build
@@ -20,13 +21,13 @@ on your machine.
 -------
 
 The ims program requires access to some rawfiles taken from a VisualSpreadsheet
-run as well as a calibration image from the run.
+run as well as a calibration image from the same run.
 
-1. File|Load Image
+Step 1 - File | Load Image
 
 Load a rawfile_xxxxxx.tif from a VisualSpreadsheet run.
 
-2. File|Load Background Image
+Step 2 - File|Load Background Image
 
 Load a cal_image_xxxxxx.tif image from the run.
 
