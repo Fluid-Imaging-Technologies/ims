@@ -3,6 +3,10 @@
 
 A small Win7/Mil9 app for exploring the image processing chain for VisualSpreadsheet.
 
+
+  Build
+-------
+
 The project settings expect to find the Mil9 include and libraries in the following
 relative location from this project
 
@@ -10,4 +14,62 @@ relative location from this project
 
 So the easiest thing to do is clone this project at the same level as FlowCAMSoftware
 on your machine.
+
+
+  Usage
+-------
+
+The ims program requires access to some rawfiles taken from a VisualSpreadsheet
+run as well as a calibration image from the run.
+
+1. File|Load Image
+
+Load a rawfile_xxxxxx.tif from a VisualSpreadsheet run.
+
+2. File|Load Background Image
+
+Load a cal_image_xxxxxx.tif image from the run.
+
+
+At this point you will 5 windows open on the screen.
+
+Window 1 - IMS 1.3.0
+
+The main IMS window that has a one line status bar that shows the elapsed
+time for the last operation.
+
+
+Window 2 - Setup
+
+This is the control dialog for the app.
+
+
+Window 3 - Raw: <some-path>/rawfile_xxxxxx.tif
+
+This is the starting raw image to be processed.
+
+
+Window 4 - Background: <some-path>/cal_image_xxxxxx.tif
+
+The background calibration image for processing the raw image.
+
+
+Window 5 - Overlay Results
+
+This is the final result of the image processing. The resulting pixels that
+will be considered part of this image will be shown in this window. The
+4 buttons do the following:
+
+Hide Pixels - Show or hide the pixels considered part of this image after processing.
+This is the same as the binary image overlay in VisualSpreadsheet.
+
+Hide Edges - This shows or hides the edges VisualSpreadsheet would calculate for this 
+particle and that would be saved in the project edge file. Currently these edges are
+calculated for all particles, but not used by VisualSpreadsheet for display or analysis.
+
+Hide Rects - This shows or hides the bounding rectangle(s) for the particle that would
+be used to distinguish this particle from others. The ims program does not do DNN.
+
+Hide Image - This shows or hides the underlying raw image when showing the calculated
+overlay data.
 
