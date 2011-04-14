@@ -158,6 +158,8 @@ that can be applied to the binary image. Access them using the "Binary..." butto
 You change any control setting and click "Apply" to see your changes.
 
 The Save As buttons let you save your configurations so you can easily compare.
+
 The Load buttons restore your saved configurations.
+
 The Use Defaults button restores the control options to the VisualSpreadsheet
 defaults.
