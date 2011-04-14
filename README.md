@@ -27,12 +27,12 @@ Step 1 - File | Load Image
 
 Load a rawfile_xxxxxx.tif from a VisualSpreadsheet run.
 
-Step 2 - File|Load Background Image
+Step 2 - File | Load Background Image
 
 Load a cal_image_xxxxxx.tif image from the run.
 
 
-At this point you will 5 windows open on the screen.
+At this point you will have 5 windows open on the screen.
 
 Window 1 - IMS 1.3.0
 
@@ -73,4 +73,26 @@ be used to distinguish this particle from others. The ims program does not do DN
 
 Hide Image - This shows or hides the underlying raw image when showing the calculated
 overlay data.
+
+
+So now it's time to play. Without changing any settings click the Apply button
+in the Setup window. You will get three new windows. I should mention that a two
+monitor setup with big monitors makes ims a whole lot more fun to use.
+
+The three new windows are
+
+Window 6 - Masked Image
+
+The masked image is the result of subtracting the raw image from the background image.
+
+
+Window 7 - Grayscale Image
+
+The grayscale image is the result of image convolutions applied to the masked image.
+
+
+Window 8 - Binarized Image
+
+Here is where we use the threshold to finally decide which pixels to keep and which
+to ignore. Pixels we keep are set to white and the rest set to black.
 
