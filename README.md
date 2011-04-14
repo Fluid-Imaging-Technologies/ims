@@ -58,17 +58,17 @@ This is the final result of the image processing. The resulting pixels that
 will be considered part of this image will be shown in this window. The
 4 buttons do the following:
 
-Hide Pixels - Show or hide the pixels considered part of this image after processing.
+##### Hide Pixels - Show or hide the pixels considered part of this image after processing.
 This is the same as the binary image overlay in VisualSpreadsheet.
 
-Hide Edges - This shows or hides the edges VisualSpreadsheet would calculate for this 
+##### Hide Edges - This shows or hides the edges VisualSpreadsheet would calculate for this 
 particle and that would be saved in the project edge file. Currently these edges are
 calculated for all particles, but not used by VisualSpreadsheet for display or analysis.
 
-Hide Rects - This shows or hides the bounding rectangle(s) for the particle that would
+##### Hide Rects - This shows or hides the bounding rectangle(s) for the particle that would
 be used to distinguish this particle from others. The ims program does not do DNN.
 
-Hide Image - This shows or hides the underlying raw image when showing the calculated
+##### Hide Image - This shows or hides the underlying raw image when showing the calculated
 overlay data.
 
 
