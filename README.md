@@ -155,6 +155,8 @@ that can be applied to the binary image. Access them using the "Binary..." butto
 ##### Binary Convolutions: Close, Open
 
 
+
+
 You change any control setting and click "Apply" to see your changes.
 
 The Save As buttons let you save your configurations so you can easily compare.
