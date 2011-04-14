@@ -97,7 +97,7 @@ to ignore. Pixels we keep are set to white and the rest set to black.
 
 The VisualSpreadsheet image processing path is
 
-#### Raw -> Masked -> Grayscale -> Binary -> Overlay
+## Raw -> Masked -> Grayscale -> Binary -> Overlay
 
 
 You have the following control operations for each step.
@@ -120,4 +120,23 @@ from the calibration image to keep. The results are shown in the Mask Image as w
 pixels (the difference) on a black background.
 
 ##### Background Elimination: Pixels Darker, Pixels Lighter, All Pixels Different
+
+
+### Grayscale Image Operations
+
+Grayscale operations are to the masked image. You can increase the contrast and/or
+perform a number of convolutions.
+
+The formula for calculating the contrast increase is
+
+	new-pixel-value = pixel-value^n * (255.0 / 256.0^n)   where n = 0.9, 0.8, 0.7 or 0.6
+
+##### Increase Contrast: None, 1(pow 9), 2(pow 8), 3(pow 7), 4(pow 6)
+
+The grayscale convolutions can be strung together in any order, but each operation
+can only be applied once in the current implementation. (This should probably
+change.) The grayscale convolutions are configured from the dialog invoked from
+the "Gray..." button.
+
+##### Grayscale Convolutions: Close, Open, Prewitt, Prewitt+, Smooth, Sobel, Sobel+
 
