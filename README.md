@@ -129,7 +129,8 @@ perform a number of convolutions.
 
 The formula for calculating the contrast increase is
 
-	new-pixel-value = pixel-value^n * (255.0 / 256.0^n)   where n = 0.9, 0.8, 0.7 or 0.6
+	new-pixel-value = pixel-value^n * (255.0 / 256.0^n)   
+	where n = 0.9, 0.8, 0.7 or 0.6 and pixel values range from 0-255
 
 ##### Increase Contrast: None, 1(pow 9), 2(pow 8), 3(pow 7), 4(pow 6)
 
@@ -140,3 +141,23 @@ the "Gray..." button.
 
 ##### Grayscale Convolutions: Close, Open, Prewitt, Prewitt+, Smooth, Sobel, Sobel+
 
+
+### Binary Operations
+
+The conversion from Grayscale to Binary uses the threshold value you specify
+manually or if you check the auto threshold, the recommended threshold the
+system calculates for you. The (Auto) field always calculates the value the
+automatic thresholding would have used.
+
+After conversion to grayscale to binary, there are some additional convolutions
+that can be applied to the binary image. Access them using the "Binary..." button.
+
+##### Binary Convolutions: Close, Open
+
+
+You change any control setting and click "Apply" to see your changes.
+
+The Save As buttons let you save your configurations so you can easily compare.
+The Load buttons restore your saved configurations.
+The Use Defaults button restores the control options to the VisualSpreadsheet
+defaults.
