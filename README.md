@@ -3,6 +3,8 @@
 A Win7/Mil9/VS2010 project for experimenting with and testing the image processing chain 
 for VisualSpreadsheet.
 
+The ims program opens 8 windows you will want to monitor, so a setup with one big monitor
+or two good size monitors makes ims much easier to use.
 
 ##  Build
 
@@ -37,7 +39,7 @@ The main IMS window that has a one line status bar that shows the elapsed
 time for the last operation.
 
 
-#### Window 2 - Setup
+#### Window 2 - Control
 
 This is the control dialog for the app.
 
@@ -73,10 +75,9 @@ overlay data.
 
 
 So now it's time to play. Without changing any settings click the Apply button
-in the Setup window. You will get three new windows. I should mention that a two
-monitor setup with big monitors makes ims a whole lot more fun to use.
+in the Setup window. You will get three new windows. 
 
-The three new windows are
+They are
 
 #### Window 6 - Masked Image
 
@@ -92,4 +93,31 @@ The grayscale image is the result of image convolutions applied to the masked im
 
 Here is where we use the threshold to finally decide which pixels to keep and which
 to ignore. Pixels we keep are set to white and the rest set to black.
+
+
+The VisualSpreadsheet image processing path is
+
+#### Raw -> Masked -> Grayscale -> Binary -> Overlay
+
+
+You have the following control operations for each step.
+
+
+### Raw Image Operations
+
+These are all operations on the raw camera image which may be color. Use the "Raw..."
+button to invoke any or all of the operations.
+
+##### Raw Operations: Sharpen, Sharpen Aggressive, Smooth
+
+
+
+### Masked Image Operations
+
+The masked image is the result of subtracting the calibration image from the Raw Image.
+The Background Elimination option allows for deciding which pixels that are different
+from the calibration image to keep. The results are shown in the Mask Image as white
+pixels (the difference) on a black background.
+
+##### Background Elimination: Pixels Darker, Pixels Lighter, All Pixels Different
 
